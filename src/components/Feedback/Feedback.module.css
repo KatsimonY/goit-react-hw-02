@@ -1,0 +1,9 @@
+p {
+  margin: 0;
+}
+
+.box {
+  padding: 20px;
+  display: flex;
+  gap: 15px;
+}
