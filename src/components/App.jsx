@@ -4,7 +4,7 @@ import { Options } from './Options/Options';
 import { Feedback } from './Feedback/Feedback';
 import { Notification } from './Notification/Notification';
 
-function App() {
+export function App() {
   const [reviews, setReviews] = useState(() => {
     const savedReviews = window.localStorage.getItem('saved-reviews');
 
@@ -21,7 +21,7 @@ function App() {
 
   useEffect(() => {
     window.localStorage.setItem('saved-reviews', JSON.stringify(reviews));
-  });
+  }, [reviews]);
 
   const totalFeedback = reviews.good + reviews.neutral + reviews.bad;
 
@@ -83,5 +83,3 @@ function App() {
     </>
   );
 }
-
-export default App;
