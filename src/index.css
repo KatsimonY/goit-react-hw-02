@@ -1,10 +1,6 @@
-:root {
+body {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
-  font-weight: 400;
-}
-
-body {
   font-weight: 500;
   color: #faf5e9;
   background-color: #009b4d;
@@ -12,6 +8,12 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    font-size: larger;
+  }
 }
 
 .root {
